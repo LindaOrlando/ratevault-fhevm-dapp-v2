@@ -15,7 +15,7 @@ RateVault is a privacy-preserving multi-dimensional rating dApp built on FHEVM t
 ## 🏗️ Project Structure
 
 ```
-zama_rating_0004/
+ratevault-fhevm-dapp/
 ├── fhevm-hardhat-template/     # Smart contract development
 │   ├── contracts/              # Solidity contracts
 │   ├── deploy/                 # Deployment scripts
@@ -40,8 +40,8 @@ zama_rating_0004/
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/LindaOrlando/zama_rating_0004.git
-cd zama_rating_0004
+git clone https://github.com/GuyNicholas/ratevault-fhevm-dapp.git
+cd ratevault-fhevm-dapp
 ```
 
 ### 2. Install Dependencies
@@ -232,7 +232,7 @@ This project is licensed under the MIT License - see the [LICENSE](fhevm-hardhat
 
 If you encounter any issues or have questions:
 
-1. Check the [Issues](https://github.com/LindaOrlando/zama_rating_0004/issues) page
+1. Check the [Issues](https://github.com/GuyNicholas/ratevault-fhevm-dapp/issues) page
 2. Create a new issue with detailed information
 3. Include browser console logs and network details
 
