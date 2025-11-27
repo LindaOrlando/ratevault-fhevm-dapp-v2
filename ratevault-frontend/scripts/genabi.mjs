@@ -19,7 +19,16 @@ const dirname = path.basename(dir);
 
 const line = "\n===================================================================\n";
 
+// Check if ABI files already exist (for Vercel builds where deployment dir may not exist)
+const abiFile = path.join(outdir, `${CONTRACT_NAME}ABI.ts`);
+const addressesFile = path.join(outdir, `${CONTRACT_NAME}Addresses.ts`);
+
 if (!fs.existsSync(dir)) {
+  // If deployment dir doesn't exist, check if ABI files are already present
+  if (fs.existsSync(abiFile) && fs.existsSync(addressesFile)) {
+    console.log(`${line}Deployment directory not found, but ABI files exist. Skipping generation.${line}`);
+    process.exit(0);
+  }
   console.error(`${line}Unable to locate ${rel}. Expecting ../fhevm-hardhat-template${line}`);
   process.exit(1);
 }
